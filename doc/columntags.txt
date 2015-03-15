@@ -1,0 +1,43 @@
+*ColumnTags*	Plugin for following tags in column-view
+                                                                       
+This plugin offers commands and mappings to better navigate tags revealing both
+the calling code and the definitions.
+
+Commands:
+
+:CollumnTagOpen                                         *:CollumnTagOpen*
+CTRL_]                      Follow the tag under the cursor in a new vertical
+                            split. If the number of existing columns is
+                            g:max_columns and the rightmost column is focused,
+                            the view will be shifted to the left before doing
+                            the vertical split. If you follow a tag from a
+                            column that is not rightmost, the new column will
+                            replace those that are to the right of the one that
+                            was in focus.
+
+:CollumnTagClose                                        *:CollumnTagClose*
+CTRL_t                      Go back to where you were before following a tag.
+                            If the column under focus is not the leftmost, this
+                            means simply focusing on the column to the left. If
+                            the leftmost column was focused, the windows that
+                            got hidden by following tags and moving towards the
+                            right will start being revealed.
+
+:CollumnTagShiftLeft                                    *:CollumnTagShiftLeft*
+CTRL_,                      Shift all you columns to the left, revealing
+                            columns that got hidden as your were navigating
+                            tags to ther right, without changing the focused
+                            window.
+                                                                       
+                                                                       
+                                                        *ColumnTags-settings*
+You can override the above mappings in your .vimrc, like this:
+
+    nmap <silent> <C-.> :CollumnTagOpen<CR>
+    nmap <silent> <C-,> :CollumnTagClose<CR>
+    nmap <silent> <C-t> :CollumnTagShiftLeft<CR>
+
+You can override the maximum number of columns in your .vimrc like this
+(default is 3):
+
+    let g:max_columns = 4
