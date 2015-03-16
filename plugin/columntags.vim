@@ -137,7 +137,7 @@ function s:column_tag_back()
     let l:linenumber = l:value['line']
     execute 'edit ' . l:filepath
     execute 'goto ' . line2byte(l:linenumber)
-    foldopen!
+    silent! foldopen!
 endfunction
 
 function s:column_tag_shift_left()
