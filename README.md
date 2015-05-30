@@ -15,7 +15,7 @@ of both the part of the code you navigated from and the part of the code that
 hosts the definition of you keyword. The final experience is reminiscent of the
 column-view of Mac's file manager program, Finder.
 
-![Column-view screenshot](http://cdn.osxdaily.com/wp-content/uploads/2010/02/mac-os-x-finder-column-view.JPG)
+![Animated demonstration](https://cloud.githubusercontent.com/assets/8060970/6943578/e60f09c0-d886-11e4-8bd4-cbd080dd551a.gif)
 
 To get started, you must create a tags file in the base folder of you project.
 Most developmnent environments come with *ctags* installed, so simply run:
