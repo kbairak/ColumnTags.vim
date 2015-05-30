@@ -4,13 +4,13 @@
 " License: This file is placed in the public domain
 " Version: 0.1
 
-if exists("g:loaded_columntags")
+if exists("g:columntags_loaded")
     finish
 endif
-let g:loaded_columntags = 1
+let g:columntags_loaded = 1
 
 " Globals
-let g:max_columns = 3
+let g:columntags_max_columns = 3
 
 " Stash
 " camelCase for staticmethods, underscore for instance methods

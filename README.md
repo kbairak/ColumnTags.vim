@@ -68,4 +68,5 @@ Just paste the package's contents into into your .vim directory.
 You can customize the maximum number of columns visible by putting this in your
 .vimrc (default is 3):
 
-    let g:max_columns = 4
+    let g:columntags_max_columns = 4
+
