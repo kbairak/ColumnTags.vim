@@ -101,15 +101,15 @@ function s:column_tag_open()
     endif
 
     let l:stash = s:Stash.getForTab()
-    if s:get_window_count() >= g:max_columns
+    if s:get_window_count() >= g:columntags_max_columns
         call s:focus_window(1)
         call l:stash.push({'file': expand('%'), 'line': line('.')})
         call s:delete_window(1)
-        call s:focus_window(g:max_columns - 1)
+        call s:focus_window(g:columntags_max_columns - 1)
     endif
     call s:split_right()
 
-    while ! l:stash.is_empty() && s:get_window_count() < g:max_columns
+    while ! l:stash.is_empty() && s:get_window_count() < g:columntags_max_columns
         call s:column_tag_shift_left()
     endwhile
 endfunction
@@ -126,7 +126,7 @@ function s:column_tag_back()
     endif
 
     let l:window_count = s:get_window_count()
-    if l:window_count >= g:max_columns
+    if l:window_count >= g:columntags_max_columns
         call s:delete_window(l:window_count)
         call s:focus_window(1)
     endif
@@ -147,14 +147,14 @@ function s:column_tag_shift_left()
     endif
 
     let l:source = s:get_focused_window()
-    if s:get_window_count() == g:max_columns
-        call s:delete_window(g:max_columns)
+    if s:get_window_count() == g:columntags_max_columns
+        call s:delete_window(g:columntags_max_columns)
     endif
 
     call s:focus_window(1)
     call s:column_tag_back()
 
-    if l:source == g:max_columns
+    if l:source == g:columntags_max_columns
         let l:source -= 1
     endif
     call s:focus_window(l:source + 1)

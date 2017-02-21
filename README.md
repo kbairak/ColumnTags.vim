@@ -26,7 +26,7 @@ Most developmnent environments come with *ctags* installed, so simply run:
 While using the plugin, you will have up to 3 windows displayed as columns.
 
 With `CTRL-]`, you can follow the tag under the cursor in a new vertical split.
-If the number of existing columns is `g:max_columns` and the rightmost column
+If the number of existing columns is `g:columntags_max_columns` and the rightmost column
 is focused, the view will be shifted to the left before doing the vertical
 split. If you follow a tag from a column that is not rightmost, the new column
 will replace those that are to the right of the one that was in focus. The goal
@@ -48,7 +48,7 @@ Just paste the package's contents into into your .vim directory.
 ## Installing with [Pathogen](https://github.com/tpope/vim-pathogen)
 
 1. `cd ~/.vim/bundle`
-2. `git clone git://github.com/kbairak/ColumnTags.vim.git
+2. `git clone git://github.com/kbairak/ColumnTags.vim.git`
 
 
 ## Usage

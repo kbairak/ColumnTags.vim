@@ -8,12 +8,12 @@ Commands:
 :CollumnTagOpen                                         *:CollumnTagOpen*
 CTRL_]                      Follow the tag under the cursor in a new vertical
                             split. If the number of existing columns is
-                            g:max_columns and the rightmost column is focused,
-                            the view will be shifted to the left before doing
-                            the vertical split. If you follow a tag from a
-                            column that is not rightmost, the new column will
-                            replace those that are to the right of the one that
-                            was in focus.
+                            g:columntags_max_columns and the rightmost column
+                            is focused, the view will be shifted to the left
+                            before doing the vertical split. If you follow a
+                            tag from a column that is not rightmost, the new
+                            column will replace those that are to the right of
+                            the one that was in focus.
 
 :CollumnTagClose                                        *:CollumnTagClose*
 CTRL_t                      Go back to where you were before following a tag.
@@ -40,4 +40,4 @@ You can override the above mappings in your .vimrc, like this:
 You can override the maximum number of columns in your .vimrc like this
 (default is 3):
 
-    let g:max_columns = 4
+    let g:columntags_max_columns = 4
